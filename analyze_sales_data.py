@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
+#Ramdom datas
 def generate_sales_data():
     np.random.seed(42)
     
@@ -16,6 +17,7 @@ def generate_sales_data():
     }
     
     return pd.DataFrame(data)
+
 
 def clean_transform_data(df):
     print("Checking for missing data")
@@ -41,6 +43,7 @@ def aggregate_data(df):
     
     return grouped_df
 
+#Texts 
 def create_visualizations(grouped_df):
 
     fig1 = px.bar(
@@ -62,6 +65,7 @@ def create_visualizations(grouped_df):
     )
     fig2.show()
 
+#Error and some messages 
 def main():
     df = generate_sales_data()
     print("Dataset successfully generated!")
